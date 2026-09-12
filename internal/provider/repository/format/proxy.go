@@ -17,10 +17,10 @@
 package format
 
 import (
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/validators"
 	"regexp"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
-	"terraform-provider-sonatyperepo/internal/provider/validators"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
 	"github.com/hashicorp/terraform-plugin-framework/attr"

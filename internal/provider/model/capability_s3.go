@@ -17,8 +17,8 @@
 package model
 
 import (
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
 	"github.com/hashicorp/terraform-plugin-framework/types"

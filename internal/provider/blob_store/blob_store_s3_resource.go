@@ -31,8 +31,8 @@ import (
 	"github.com/sonatype-nexus-community/terraform-provider-shared/errors"
 	"github.com/sonatype-nexus-community/terraform-provider-shared/schema"
 
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 
 	sonatyperepo "github.com/sonatype-nexus-community/nexus-repo-api-client-go/v3"
 )

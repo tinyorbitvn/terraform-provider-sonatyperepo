@@ -19,7 +19,7 @@ package repository
 import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 
-	"terraform-provider-sonatyperepo/internal/provider/repository/format"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/repository/format"
 )
 
 // NewRepositoryHelmHostedResource is a helper function to simplify the provider implementation.

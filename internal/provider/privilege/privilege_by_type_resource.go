@@ -17,7 +17,7 @@
 package privilege
 
 import (
-	"terraform-provider-sonatyperepo/internal/provider/privilege/privilege_type"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/privilege/privilege_type"
 
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 )

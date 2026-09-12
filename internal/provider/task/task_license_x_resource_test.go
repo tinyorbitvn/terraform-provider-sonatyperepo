@@ -18,9 +18,9 @@ package task_test
 
 import (
 	"fmt"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/testutil"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/testutil"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"

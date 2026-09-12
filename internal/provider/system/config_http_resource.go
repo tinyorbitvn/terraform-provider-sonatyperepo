@@ -33,8 +33,8 @@ import (
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 	v3 "github.com/sonatype-nexus-community/nexus-repo-api-client-go/v3"
 
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 
 	"github.com/sonatype-nexus-community/terraform-provider-shared/errors"
 	"github.com/sonatype-nexus-community/terraform-provider-shared/schema"

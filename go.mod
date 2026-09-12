@@ -1,4 +1,4 @@
-module terraform-provider-sonatyperepo
+module github.com/tinyorbitvn/terraform-provider-sonatyperepo
 
 go 1.25.13
 

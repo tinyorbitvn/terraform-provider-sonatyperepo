@@ -19,10 +19,10 @@ package capability
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"net/http"
 	"reflect"
 	"slices"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/diag"
@@ -36,7 +36,7 @@ import (
 	"github.com/sonatype-nexus-community/terraform-provider-shared/errors"
 	"github.com/sonatype-nexus-community/terraform-provider-shared/schema"
 
-	capabilitytype "terraform-provider-sonatyperepo/internal/provider/capability/capability_type"
+	capabilitytype "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/capability/capability_type"
 )
 
 const (

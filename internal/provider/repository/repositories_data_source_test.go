@@ -23,7 +23,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
 
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 )
 
 func TestAccRepositoriesDataSource(t *testing.T) {

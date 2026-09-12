@@ -19,7 +19,7 @@ package capability
 import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 
-	capabilitytype "terraform-provider-sonatyperepo/internal/provider/capability/capability_type"
+	capabilitytype "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/capability/capability_type"
 )
 
 // NewCapabilityAuditResource is a helper function to simplify the provider implementation.

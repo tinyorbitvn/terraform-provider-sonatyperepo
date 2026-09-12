@@ -19,8 +19,8 @@ package model
 import (
 	"context"
 	"encoding/json"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 
 	"github.com/sonatype-nexus-community/terraform-provider-shared/util"
 

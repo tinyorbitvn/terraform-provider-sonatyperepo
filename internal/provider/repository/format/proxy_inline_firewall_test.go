@@ -19,12 +19,12 @@ package format
 import (
 	"testing"
 
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/stretchr/testify/assert"
 	sonatyperepo "github.com/sonatype-nexus-community/nexus-repo-api-client-go/v3"
+	"github.com/stretchr/testify/assert"
 )
 
 // TestConanProxyUpdateStateFromApiUnwrapsFirewallMode, and its siblings below (including the

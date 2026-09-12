@@ -17,7 +17,7 @@
 package utils_test
 
 import (
-	"terraform-provider-sonatyperepo/internal/provider"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"

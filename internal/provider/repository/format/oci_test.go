@@ -17,7 +17,7 @@
 package format
 
 import (
-	"terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

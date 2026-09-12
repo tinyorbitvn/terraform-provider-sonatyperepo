@@ -19,8 +19,8 @@ package main
 import (
 	"context"
 	"flag"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider"
 	"log"
-	"terraform-provider-sonatyperepo/internal/provider"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 )

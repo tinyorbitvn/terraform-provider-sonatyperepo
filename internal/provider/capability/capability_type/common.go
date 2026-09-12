@@ -19,9 +19,9 @@ package capabilitytype
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"net/http"
 	"regexp"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/setvalidator"
 	"github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"

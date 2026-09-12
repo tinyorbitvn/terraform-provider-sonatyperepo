@@ -19,10 +19,10 @@ package tasktype
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 	"net/http"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/diag"

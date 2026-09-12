@@ -17,9 +17,9 @@ package system_test
 
 import (
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/testutil"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"os"
-	"terraform-provider-sonatyperepo/internal/provider/testutil"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 	"time"
 

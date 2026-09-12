@@ -18,10 +18,10 @@ package capability_test
 
 import (
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/testutil"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"strconv"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/testutil"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"

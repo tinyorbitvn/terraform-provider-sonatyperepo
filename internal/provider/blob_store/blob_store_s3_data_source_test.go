@@ -17,9 +17,9 @@
 package blob_store_test
 
 import (
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"os"
 	"regexp"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/resource"
