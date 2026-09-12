@@ -19,11 +19,11 @@ package testutil
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 	"testing"
 	"time"
 

@@ -19,7 +19,7 @@ package task
 import (
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 
-	tasktype "terraform-provider-sonatyperepo/internal/provider/task/task_type"
+	tasktype "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/task/task_type"
 )
 
 // NewTaskLicenseExpirationNotificationResource is a helper function to simplify the provider implementation.

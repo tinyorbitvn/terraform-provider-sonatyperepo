@@ -23,7 +23,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 
-	"terraform-provider-sonatyperepo/internal/provider/repository/format"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/repository/format"
 )
 
 // repositoryResourceDeprecated wraps repositoryResource to provide deprecated resource aliases

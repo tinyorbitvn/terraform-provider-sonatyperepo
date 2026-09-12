@@ -19,8 +19,8 @@ package capability
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"net/http"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/diag"

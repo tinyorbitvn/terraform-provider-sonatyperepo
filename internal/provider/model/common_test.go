@@ -17,7 +17,7 @@
 package model_test
 
 import (
-	"terraform-provider-sonatyperepo/internal/provider/model"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 	"testing"
 )
 

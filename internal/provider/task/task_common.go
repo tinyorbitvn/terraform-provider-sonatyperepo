@@ -19,11 +19,11 @@ package task
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	tasktype "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/task/task_type"
 	"net/http"
 	"reflect"
 	"slices"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	tasktype "terraform-provider-sonatyperepo/internal/provider/task/task_type"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/listvalidator"

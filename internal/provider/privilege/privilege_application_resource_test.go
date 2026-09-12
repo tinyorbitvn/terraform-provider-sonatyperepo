@@ -18,8 +18,8 @@ package privilege_test
 
 import (
 	"fmt"
-	"terraform-provider-sonatyperepo/internal/provider/privilege/privilege_type"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/privilege/privilege_type"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"

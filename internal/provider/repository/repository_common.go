@@ -34,9 +34,9 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types/basetypes"
 	"github.com/hashicorp/terraform-plugin-log/tflog"
 
-	"terraform-provider-sonatyperepo/internal/provider/capability"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/repository/format"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/capability"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/repository/format"
 
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"

@@ -20,12 +20,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/testutil"
 	"io"
 	"log"
 	"net/http"
 	"os"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/testutil"
 	"testing"
 	"time"
 

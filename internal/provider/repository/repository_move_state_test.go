@@ -24,7 +24,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"terraform-provider-sonatyperepo/internal/provider/repository/format"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/repository/format"
 )
 
 const (

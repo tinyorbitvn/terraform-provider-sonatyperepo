@@ -18,10 +18,10 @@ package blob_store_test
 
 import (
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"os"
 	"regexp"
-	"terraform-provider-sonatyperepo/internal/provider"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"

@@ -18,10 +18,10 @@ package format
 
 import (
 	"context"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 	"maps"
 	"net/http"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	"terraform-provider-sonatyperepo/internal/provider/model"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"

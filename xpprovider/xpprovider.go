@@ -26,7 +26,7 @@ package xpprovider
 import (
 	fwprovider "github.com/hashicorp/terraform-plugin-framework/provider"
 
-	"terraform-provider-sonatyperepo/internal/provider"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider"
 )
 
 // New returns a configured-later terraform-plugin-framework provider,

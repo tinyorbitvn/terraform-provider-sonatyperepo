@@ -19,9 +19,9 @@ package tasktype
 import (
 	"context"
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
 	"net/http"
 	"strings"
-	"terraform-provider-sonatyperepo/internal/provider/common"
 
 	"github.com/hashicorp/terraform-plugin-framework/diag"
 	tfschema "github.com/hashicorp/terraform-plugin-framework/resource/schema"

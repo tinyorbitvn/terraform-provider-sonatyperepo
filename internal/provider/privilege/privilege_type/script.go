@@ -18,8 +18,8 @@ package privilege_type
 
 import (
 	"context"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/model"
 	"net/http"
-	"terraform-provider-sonatyperepo/internal/provider/model"
 	"time"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/setvalidator"

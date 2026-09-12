@@ -6,7 +6,7 @@ import (
 
 	fwprovider "github.com/hashicorp/terraform-plugin-framework/provider"
 
-	"terraform-provider-sonatyperepo/xpprovider"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/xpprovider"
 )
 
 // The shim exists so that Crossplane/Upjet-based providers can embed this

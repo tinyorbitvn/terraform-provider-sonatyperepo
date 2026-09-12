@@ -18,11 +18,11 @@ package swift_test
 
 import (
 	"fmt"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/common"
+	repotest "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/repository/repotest"
+	"github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/testutil"
+	utils_test "github.com/tinyorbitvn/terraform-provider-sonatyperepo/internal/provider/utils"
 	"regexp"
-	"terraform-provider-sonatyperepo/internal/provider/common"
-	repotest "terraform-provider-sonatyperepo/internal/provider/repository/repotest"
-	"terraform-provider-sonatyperepo/internal/provider/testutil"
-	utils_test "terraform-provider-sonatyperepo/internal/provider/utils"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/helper/acctest"
