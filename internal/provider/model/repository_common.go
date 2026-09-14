@@ -46,13 +46,38 @@ type RepositoryCleanupModel struct {
 }
 
 func (m *RepositoryCleanupModel) MapFromApi(api *sonatyperepo.CleanupPolicyAttributes) RepositoryCleanupModel {
-	if api != nil && len(api.PolicyNames) > 0 {
-		m = NewRepositoryCleanupModel()
+	// This used to assign `m = nil` and then `return *m`, panicking for every repository
+	// without a cleanup policy. Write through the receiver and return a copy instead.
+	m.PolicyNames = make([]types.String, 0)
+	if api != nil {
 		mapCleanupFromApi(api, m)
-	} else {
-		m = nil
 	}
 	return *m
+}
+
+// cleanupFromApi builds the `cleanup` model from an API response, treating "no cleanup"
+// and "cleanup with an empty policy_names" as the same thing.
+//
+// Why: Nexus cannot store an empty cleanup block. Sending `{"policyNames": []}` and
+// reading back yields no cleanup at all. The previous code nil-ed the state in that case,
+// so a configuration declaring `cleanup { policy_names = [] }` never converged: read
+// gives null, null differs from the configuration, update, read gives null again...
+// Measured on a live cluster on 2026-09-14 while driven by Crossplane: the provider
+// rewrote the same repository 600 times per minute, each write stopping and starting a
+// repository on a production registry.
+//
+// Keeping an existing empty state when the API returns no policies makes the read
+// idempotent and the loop disappears. Behaviour with real policies is unchanged.
+func cleanupFromApi(api *sonatyperepo.CleanupPolicyAttributes, current *RepositoryCleanupModel) *RepositoryCleanupModel {
+	if api != nil && len(api.PolicyNames) > 0 {
+		m := NewRepositoryCleanupModel()
+		mapCleanupFromApi(api, m)
+		return m
+	}
+	if current != nil && len(current.PolicyNames) == 0 {
+		return current
+	}
+	return nil
 }
 
 func NewRepositoryCleanupModel() *RepositoryCleanupModel {

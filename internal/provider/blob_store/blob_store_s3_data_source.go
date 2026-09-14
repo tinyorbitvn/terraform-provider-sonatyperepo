@@ -124,7 +124,7 @@ func (d *s3BlobStoreDataSource) Read(ctx context.Context, req datasource.ReadReq
 		Name: types.StringValue(data.Name.ValueString()),
 		Type: types.StringValue(common.BLOB_STORE_TYPE_S3),
 		BucketConfiguration: &model.BlobStoreS3BucketConfigurationModel{
-			Bucket: model.BlobStoreS3BucketModel{
+			Bucket: &model.BlobStoreS3BucketModel{
 				Region: types.StringValue(apiResponse.BucketConfiguration.Bucket.Region),
 				Name:   types.StringValue(apiResponse.BucketConfiguration.Bucket.Name),
 			},
