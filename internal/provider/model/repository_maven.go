@@ -42,12 +42,7 @@ func (m *RepositoryMavenHostedModel) FromApiModel(api sonatyperepo.MavenHostedAp
 	m.Url = types.StringPointerValue(api.Url)
 
 	// Cleanup
-	if api.Cleanup != nil && len(api.Cleanup.PolicyNames) > 0 {
-		m.Cleanup = NewRepositoryCleanupModel()
-		mapCleanupFromApi(api.Cleanup, m.Cleanup)
-	} else {
-		m.Cleanup = nil
-	}
+	m.Cleanup = cleanupFromApi(api.Cleanup, m.Cleanup)
 
 	// Storage
 	m.Storage.MapFromApi(&api.Storage)
@@ -107,12 +102,7 @@ func (m *RepositoryMavenProxyModel) FromApiModel(api sonatyperepo.MavenProxyApiR
 	m.Url = types.StringPointerValue(api.Url)
 
 	// Cleanup
-	if api.Cleanup != nil && len(api.Cleanup.PolicyNames) > 0 {
-		m.Cleanup = NewRepositoryCleanupModel()
-		mapCleanupFromApi(api.Cleanup, m.Cleanup)
-	} else {
-		m.Cleanup = nil
-	}
+	m.Cleanup = cleanupFromApi(api.Cleanup, m.Cleanup)
 
 	// Storage
 	m.Storage.MapFromApi(&api.Storage)

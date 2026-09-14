@@ -185,13 +185,23 @@ func (m *BlobStoreS3Model) MapToApi(api *v3.S3BlobStoreApiModel) {
 // BlobStoreS3BucketConfigurationModel
 // ------------------------------------
 type BlobStoreS3BucketConfigurationModelV0 struct {
-	Bucket                   BlobStoreS3BucketModel                    `tfsdk:"bucket"`
+	Bucket                   *BlobStoreS3BucketModel                   `tfsdk:"bucket"`
 	Encryption               *BlobStoreS3Encryption                    `tfsdk:"encryption"`
 	BucketSecurity           *BlobStoreS3BucketSecurityModel           `tfsdk:"bucket_security"`
 	AdvancedBucketConnection *BlobStoreS3AdvancedBucketConnectionModel `tfsdk:"advanced_bucket_connection"`
 }
+
+// Bucket IS A POINTER: terraform-plugin-framework cannot place a null value into a
+// plain struct. Upjet/Crossplane read the resource with an empty state (every attribute
+// null), so the previous type failed right at the observe step with:
+//
+//	"Received null value, however the target type cannot handle null values.
+//	 Path: bucket_configuration.bucket ... Suggested Pointer Type: *model.BlobStoreS3BucketModel"
+//
+// Measured on a live cluster on 2026-09-14: the S3 blob store managed resource stayed
+// Synced=False forever and never got as far as writing anything.
 type BlobStoreS3BucketConfigurationModelV1 struct {
-	Bucket                   BlobStoreS3BucketModel                    `tfsdk:"bucket"`
+	Bucket                   *BlobStoreS3BucketModel                   `tfsdk:"bucket"`
 	Encryption               *BlobStoreS3Encryption                    `tfsdk:"encryption"`
 	BucketSecurity           *BlobStoreS3BucketSecurityModel           `tfsdk:"bucket_security"`
 	AdvancedBucketConnection *BlobStoreS3AdvancedBucketConnectionModel `tfsdk:"advanced_bucket_connection"`
@@ -200,6 +210,9 @@ type BlobStoreS3BucketConfigurationModelV1 struct {
 type BlobStoreS3BucketConfigurationModel = BlobStoreS3BucketConfigurationModelV1
 
 func (m *BlobStoreS3BucketConfigurationModel) MapFromApi(api *v3.S3BlobStoreApiBucketConfiguration) {
+	if m.Bucket == nil {
+		m.Bucket = &BlobStoreS3BucketModel{}
+	}
 	m.Bucket.MapFromApi(&api.Bucket)
 	if api.Encryption != nil {
 		if m.Encryption == nil {
@@ -227,7 +240,9 @@ func (m *BlobStoreS3BucketConfigurationModel) MapFromApi(api *v3.S3BlobStoreApiB
 }
 
 func (m *BlobStoreS3BucketConfigurationModel) MapToApi(api *v3.S3BlobStoreApiBucketConfiguration) {
-	m.Bucket.MapToApi(&api.Bucket)
+	if m.Bucket != nil {
+		m.Bucket.MapToApi(&api.Bucket)
+	}
 	if m.Encryption != nil {
 		m.Encryption.MapToApi(api.Encryption)
 	}

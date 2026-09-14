@@ -36,12 +36,7 @@ func (m *RepositoryAnsibleGalaxyHostedModel) FromApiModel(api sonatyperepo.Ansib
 	m.Storage.MapFromApi(&api.Storage)
 
 	// Cleanup
-	if api.Cleanup != nil && len(api.Cleanup.PolicyNames) > 0 {
-		m.Cleanup = &RepositoryCleanupModel{}
-		mapCleanupFromApi(api.Cleanup, m.Cleanup)
-	} else {
-		m.Cleanup = nil
-	}
+	m.Cleanup = cleanupFromApi(api.Cleanup, m.Cleanup)
 }
 
 func (m *RepositoryAnsibleGalaxyHostedModel) ToApiCreateModel() sonatyperepo.AnsibleGalaxyHostedRepositoryApiRequest {
@@ -82,12 +77,7 @@ func (m *RepositoryAnsibleGalaxyProxyModel) FromApiModel(api sonatyperepo.Ansibl
 	m.Url = types.StringPointerValue(api.Url)
 
 	// Cleanup
-	if api.Cleanup != nil && len(api.Cleanup.PolicyNames) > 0 {
-		m.Cleanup = NewRepositoryCleanupModel()
-		mapCleanupFromApi(api.Cleanup, m.Cleanup)
-	} else {
-		m.Cleanup = nil
-	}
+	m.Cleanup = cleanupFromApi(api.Cleanup, m.Cleanup)
 
 	// Storage
 	m.Storage.MapFromApi(&api.Storage)
